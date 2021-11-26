@@ -15,7 +15,7 @@ class CreateSharesTable extends Migration
     {
         Schema::create('shares', function (Blueprint $table) {
             $table->id();
-            $table->string('hash',255)->unique();
+            $table->string('hash',10)->unique();
             $table->string('password',10);
             $table->timestamps();
         });
