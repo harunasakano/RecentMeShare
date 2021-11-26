@@ -26,7 +26,7 @@ Route::get('/answer_show', function () {
 //これで確認画面に到達する
 Route::get('/answer_show/{share_id}', function (Request $request) {
     if (!$request->hasValidSignature()) {
-        abort(401);
+        abort(403);
     }
     return view('app');
 })->name('answer_show');
